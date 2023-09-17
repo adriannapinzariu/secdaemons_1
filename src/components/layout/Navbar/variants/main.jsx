@@ -16,7 +16,7 @@ export default function MainNavbar () {
                 />
             </div>
 
-            <div className={'h-full flex items-center gap-4 text-md'}>
+            <div className={'h-full hidden items-center gap-4 text-md sm:flex'}>
                 {/* Iterate through navigations and render each element */}
 
                 {
@@ -46,6 +46,10 @@ export default function MainNavbar () {
                         </Link>
                     ))
                 }
+            </div>
+
+            <div>
+                
             </div>
         </div>
     )
