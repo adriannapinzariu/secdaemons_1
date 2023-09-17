@@ -24,6 +24,13 @@ export const navigations = [
     }
 ]
 
+export const socials = [
+    {
+        src: '/social/discord.svg',
+        href: '/'
+    }
+]
+
 // This is set up in case that in the future, we want a different navbar rendering on different views, we can use this 
 // dictionary to map out the different navbar variant to the associated pathname. 
 const navbarFromPath = {

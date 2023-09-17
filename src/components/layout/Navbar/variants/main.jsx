@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import { navigations } from "..";
+import { navigations, socials } from "..";
 import Link from "next/link";
 
 export default function MainNavbar () {
     return (
-        <div className="w-full h-[80px] flex justify-around items-center">
+        <div className="w-full h-[80px] flex justify-around items-center fixed top-0 left-0">
             <div id="nav-image-container" className={'cursor-pointer'}>
                 <Image
                 src="/brand/logo.png"
@@ -26,6 +26,25 @@ export default function MainNavbar () {
                         className={'text-inactive-txt hover:text-white transition-colors pointer-events-auto cursor-pointer'}
                         >
                             { `<${value.name} />`}
+                        </Link>
+                    ))
+                }
+
+                {/* Iterate through socials and render each element */}
+
+                {
+                    socials.map((value, index) => (
+                        <Link
+                        href={value.href}
+                        key={index}
+                        className={'text-inactive-txt hover:text-white transition-colors pointer-events-auto cursor-pointer'}
+                        >
+                            <Image
+                            src={value.src}
+                            alt={value.href}
+                            height={25}
+                            width={25}
+                            />
                         </Link>
                     ))
                 }
