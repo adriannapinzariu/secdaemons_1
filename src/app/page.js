@@ -1,13 +1,14 @@
 import Image from 'next/image'
 
 export default function Home() {
+  const borderColor = "#D4000A";
   const borderThickness = "5px";
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black">
       <div className="flex items-center justify-center">
       <Image 
-          src="/brand/logo.png" 
+          src="/brand/logo.png"
           alt="Logo"
           className="max-w-full h-auto"
           width={500}   
