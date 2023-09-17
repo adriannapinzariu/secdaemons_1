@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black">
       <div className="flex items-center justify-center">
       <Image 
-          src="/logo.png" 
+          src="/brand/logo.png" 
           alt="Logo"
           className="max-w-full h-auto"
           width={400}   
