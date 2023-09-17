@@ -25,13 +25,9 @@ export default function Home() {
         />
       </div>           
       <div 
-          className="flex items-center justify-center bg-transparent mt-5"
+          className="flex items-center justify-center bg-transparent mt-5 w-full h-16 border-blue-demon-red"
           style={{
-            borderColor: borderColor,
             borderWidth: borderThickness,
-            width: '75vh',  
-            height: '7vh',  
-            marginBottom: '7.5%', 
           }}
         ></div>
     </main>
