@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { navigations, socials } from "..";
 import Link from "next/link";
+import { NavbarItem } from "../components";
 
 export default function MainNavbar () {
     return (
@@ -20,13 +21,10 @@ export default function MainNavbar () {
 
                 {
                     navigations.map((value, index) => (
-                        <Link
-                        href={value.href}
+                        <NavbarItem 
                         key={index}
-                        className={'text-inactive-txt hover:text-white transition-colors pointer-events-auto cursor-pointer'}
-                        >
-                            { `<${value.name} />`}
-                        </Link>
+                        value={value}
+                        />
                     ))
                 }
 
