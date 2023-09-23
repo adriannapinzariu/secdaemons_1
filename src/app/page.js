@@ -1,10 +1,17 @@
 import Image from 'next/image';
+import styles from './styles/Home.module.css';
+
+
+
 
 export default function Home() {
+    
     const borderColor = '#D4000A';
     const borderThickness = '5px';
 
     return (
+        
+
         <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black">
             <div className="flex items-center justify-center">
                 <Image src="/brand/logo.png" alt="Logo" className="max-w-full h-auto" width={500} height={500} />
@@ -14,6 +21,8 @@ export default function Home() {
                 style={{
                     borderWidth: borderThickness,
                     borderColor: borderColor,
+                    //backgroundImage: `url('./bar.svg')`,
+                    //backgroundRepeat: 'repeat-x'
                 }}
             >
                 {/* Loading Bar positioned inside the red box */}
@@ -24,8 +33,12 @@ export default function Home() {
                     width={16}
                     height={16}
                     className="absolute left-1.5 top-1/2 transform -translate-y-1/2"
+                  
+
                 />
             </div>
         </main>
     );
 }
+
+
