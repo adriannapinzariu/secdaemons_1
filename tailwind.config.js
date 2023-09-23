@@ -7,6 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        reveal: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+      },
+      animation: {
+        reveal: 'reveal 2s infinite',
+      },
+      maxWidth: {
+        '543px': '543px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
