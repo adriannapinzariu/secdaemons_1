@@ -9,17 +9,20 @@ import styles from './styles/Home.module.css';
 
 export default function Home() {
     const containerRef = useRef(null);
-    const [imageCount, setImageCount] = useState(0);
-    const imageWidth = 16; 
+    const [barsVisible, setBarsVisible] = useState(0);
+    const totalBars = 26;
+    const imageWidth = 16;
 
+    // Incrementally show bars
     useEffect(() => {
-        if (containerRef.current) {
-            const containerWidth = containerRef.current.offsetWidth;
-            const count = Math.ceil(containerWidth / imageWidth);
-            setImageCount(count);
+        if (barsVisible < totalBars) {
+            const timeout = setTimeout(() => {
+                setBarsVisible(barsVisible + 1);
+            }, 100);  // Here, 100ms is the delay between showing each bar
+
+            return () => clearTimeout(timeout);
         }
-    }, [containerRef]);
-    
+    }, [barsVisible]);
     const borderColor = '#D4000A';
     const borderThickness = '5px';
 
@@ -38,19 +41,19 @@ export default function Home() {
                     borderColor: borderColor,
                 }}
             >
-                               {/* Dynamically render Image components */}
-                               {Array.from({ length: 26 }).map((_, idx) => (
-                    <Image
-                        key={idx}
-                        src="/bar.svg"
-                        alt="Bar"
-                        layout="fixed"
-                        width={15}
-                        height={16}
-                        className={`absolute top-1/2 transform -translate-y-1/2`}
-                        style={{ left: `${( 9 + (idx) * (imageWidth + 4))}px`}} 
-                    />
-                ))}
+  
+        {Array.from({ length: barsVisible }).map((_, idx) => (
+        <Image
+            key={idx}
+            src="/bar.svg"
+            alt="Bar"
+            layout="fixed"
+            width={15}
+            height={16}
+            className={`absolute top-1/2 transform -translate-y-1/2`}
+            style={{ left: `${(9 + (idx) * (imageWidth + 4))}px` }}
+        />
+    ))}
       
             </div>
         </main>
