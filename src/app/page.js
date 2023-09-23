@@ -34,6 +34,7 @@ export default function Home() {
             return () => clearTimeout(timeout);
         }
     }, [barsVisible]);
+
     const borderColor = '#D4000A';
     const borderThickness = '5px';
 
