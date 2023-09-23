@@ -32,23 +32,23 @@ export default function Home() {
             </div>
             <div
                 ref={containerRef}
-                className="relative flex items-center justify-center bg-transparent mt-5 w-full h-16 border-blue-demon-red max-w-lg"
+                className="relative flex items-center justify-center bg-transparent mt-5 w-full h-16 border-blue-demon-red max-w-543px"
                 style={{
                     borderWidth: borderThickness,
                     borderColor: borderColor,
                 }}
             >
                                {/* Dynamically render Image components */}
-                               {Array.from({ length: 23 }).map((_, idx) => (
+                               {Array.from({ length: 26 }).map((_, idx) => (
                     <Image
                         key={idx}
                         src="/bar.svg"
                         alt="Bar"
                         layout="fixed"
-                        width={imageWidth}
+                        width={15}
                         height={16}
                         className={`absolute top-1/2 transform -translate-y-1/2`}
-                        style={{ left: `${( 6 + (idx) * (imageWidth + 5))}px`}} 
+                        style={{ left: `${( 9 + (idx) * (imageWidth + 4))}px`}} 
                     />
                 ))}
       
