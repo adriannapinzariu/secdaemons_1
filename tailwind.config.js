@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        slideClone: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
+        reveal: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
         },
       },
       animation: {
-        clone: 'slideClone 2s infinite linear',
+        reveal: 'reveal 2s infinite',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

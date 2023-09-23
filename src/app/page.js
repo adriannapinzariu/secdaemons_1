@@ -27,15 +27,21 @@ export default function Home() {
             >
                 {/* Loading Bar positioned inside the red box */}
                 <Image
-                    src="/bar.svg"
-                    alt="Bar"
-                    layout="fixed"
-                    width={16}
-                    height={16}
-                    className="absolute left-1.5 top-1/2 transform -translate-y-1/2"
-                  
-
-                />
+        src="/bar.svg"
+        alt="Bar"
+        layout="fixed"
+        width={16}
+        height={16}
+        className="absolute left-2 top-1/2 transform -translate-y-1/2"
+    />
+    <Image
+        src="/bar.svg"
+        alt="Bar"
+        layout="fixed"
+        width={16}
+        height={16}
+        className="absolute left-[5.5%] top-1/2 transform -translate-y-1/2"  // Adjusted left position
+    />
             </div>
         </main>
     );
