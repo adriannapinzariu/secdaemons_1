@@ -18,7 +18,7 @@ export default function Home() {
         if (barsVisible < totalBars) {
             const timeout = setTimeout(() => {
                 setBarsVisible(barsVisible + 1);
-            }, 100);  // Here, 100ms is the delay between showing each bar
+            }, 35);  // Here, 100ms is the delay between showing each bar
 
             return () => clearTimeout(timeout);
         }
