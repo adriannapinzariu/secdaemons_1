@@ -28,14 +28,14 @@ export default function Home() {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setIsLoaded(true);
-        }, 1500); 
+        }, 1800); 
     
         return () => clearTimeout(timeout);
     }, []);
 
     useEffect(() => {
         if (isLoaded) {
-            const message = "[ ACCESS GRANTED ]";
+            const message = "[ACCESS GRANTED]";
             let index = -1;
             const interval = setInterval(() => {
                 if (index < message.length - 1) {
@@ -62,6 +62,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black opacity-100 z-10 flex items-center justify-center">
                     <div className="text-green-400 text-3xl font-mono">
                         {accessMessage}
+                        <span className="blinking-cursor"></span>
                     </div>
                 </div>
             )}
