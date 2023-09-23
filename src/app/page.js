@@ -14,7 +14,7 @@ export default function Home() {
     const totalBars = 26;
     const glitch = useGlitch();
 
-    useEffect(() => {
+    useEffect(() => { // 1
         const timer = setTimeout(() => {
             glitch.startGlitch();
         }, 1000);
@@ -25,7 +25,7 @@ export default function Home() {
         };
     }, []);
 
-    useEffect(() => {
+    useEffect(() => { // 2
         const timeout = setTimeout(() => {
             setIsLoaded(true);
         }, 1800); 
@@ -33,7 +33,7 @@ export default function Home() {
         return () => clearTimeout(timeout);
     }, []);
 
-    useEffect(() => {
+    useEffect(() => { // 3
         if (isLoaded) {
             const message = "[ACCESS GRANTED]";
             let index = -1;
@@ -51,14 +51,14 @@ export default function Home() {
     }, [isLoaded]);
     
 
-    return (
+    return ( // 4
         <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black relative">
             <div className="flex items-center justify-center relative">
                 <Image src="/brand/logo.png" ref={glitch.ref} alt="Logo" width={500} height={500} />
             </div>
             <LoadingBar glitchRef={glitch.ref} />
 
-            {isLoaded && (
+            {isLoaded && ( // 5
                 <div className="absolute inset-0 bg-black opacity-100 z-10 flex items-center justify-center">
                     <div className="text-green-400 text-3xl font-mono">
                         {accessMessage}
