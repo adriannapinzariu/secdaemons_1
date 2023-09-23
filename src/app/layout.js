@@ -18,9 +18,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={source_code_pro.className}>
-                <Navbar />
-                
-                <Footer />
+      
+                {children}
+          
             </body>
         </html>
     );
