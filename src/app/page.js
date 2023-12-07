@@ -1,19 +1,24 @@
 import React from 'react';
+import './TerminalUI.css'; 
 
-const DestinationPage = () => {
+const TerminalUI = () => {
     return (
-        <div style={{ 
-            backgroundColor: 'black', 
-            color: 'white', 
-            height: '100vh', 
-            width: '100vw', 
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center' 
-        }}>
-            <h1>Welcome to the Destination Page!</h1>
+        <div className="terminal">
+            <div className="terminal-header">
+                <div className="terminal-button red"></div>
+                <div className="terminal-button yellow"></div>
+                <div className="terminal-button green"></div>
+            </div>
+            <div className="terminal-body">
+                <p className="terminal-text">user@destination:~$</p>
+                <div className="terminal-line">
+                    <span className="terminal-input">Welcome to the Terminal UI!</span>
+                    <div className="terminal-cursor"></div>
+                </div>
+            </div>
         </div>
     );
 };
 
-export default DestinationPage;
+export default TerminalUI;
+

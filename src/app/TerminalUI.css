@@ -1,0 +1,76 @@
+/* TerminalUI.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: #000 !important;
+    overflow: hidden; 
+    justify-content: center;
+    align-items: center;
+}
+
+body::before,
+body::after {
+    content: none; 
+}
+
+.terminal {
+    background-color: #1e1e1e;
+    color: #33ff00;
+    font-family: 'Courier New', monospace;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80vw;
+    height: 70vh;
+    box-shadow: 0 0 10px #000;
+    margin: 5vh auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal-header {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.terminal-button {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.terminal-button.red {
+    background-color: #ff605c;
+}
+
+.terminal-button.yellow {
+    background-color: #ffbd44;
+}
+
+.terminal-button.green {
+    background-color: #00ca56;
+}
+
+.terminal-body {
+    padding-top: 35px;
+    padding-left: 20px;
+}
+
+.terminal-text,
+.terminal-input {
+    margin: 0;
+    white-space: nowrap;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
